@@ -1,4 +1,7 @@
 gunicorn
+redis
+requests_cache==0.5.2
 requests==2.18.4
+Flask_Caching==1.7.2
 Flask==1.1.1
 voluptuous==0.11.7
