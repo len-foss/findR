@@ -1,6 +1,6 @@
 from data import categories
 from data import codes
-from voluptuous import Schema, Required, All, Optional
+from voluptuous import Schema, Required, All, Optional, ALLOW_EXTRA
 
 
 LOCALES = ['en_BE', 'fr_BE', 'nl_BE']
@@ -64,7 +64,7 @@ def validate_code(i):
 
 
 def validate_output(data_dict):
-    restaurant_schema = Schema({Required('name'): str})
+    restaurant_schema = Schema({Required('name'): str}, extra=ALLOW_EXTRA)
     input_schema = Schema({
         Required('code'): validate_code,
         Required('messages'): [str],
