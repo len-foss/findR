@@ -12,7 +12,7 @@ from argparse import ArgumentParser
 redis_url = os.environ.get("REDIS_URL", 'redis://127.0.0.1:6379')
 requests_cache.install_cache('yelp_cache', backend='redis', expire_after=900, connection=redis.from_url(redis_url))
 
-API_KEY = os.environ['API_KEY_YELP']
+API_KEY = os.environ.get('API_KEY_YELP')
 API_HOST = 'https://api.yelp.com'
 SEARCH_PATH = '/v3/businesses/search'
 TERM_RESTAURANTS = 'restaurants'

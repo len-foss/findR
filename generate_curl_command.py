@@ -19,4 +19,4 @@ data = {
 args = parse.urlencode({'data': json.dumps(data)})
 
 # print("curl -X GET 'http://localhost:5000/findr?'" + args)  # dev
-print("curl -X GET 'https://lunchpickr.herokuapp.com/findr?'" + args)
+print("curl -X GET 'https://lunchpickr.herokuapp.com/findr?" + args + "'")
